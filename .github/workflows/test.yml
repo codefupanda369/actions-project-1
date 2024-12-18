@@ -59,3 +59,14 @@ jobs:
         run: npm run test
       - name: Deploy Code
         run: echo "Deploying..."
+  mongodb:
+    env:
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+      PORT: 8080
+    runs-on: ubuntu-latest
+    steps:
+      - name: MongoDB Credentials
+        run: |
+          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
+          echo "MONGODB_PASSWORD: ${{ env.MONGODB_PASSWORD }}"
