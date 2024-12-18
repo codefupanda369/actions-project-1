@@ -15,4 +15,4 @@ jobs:
       - name: Run Tests
         run: npm run test
       - name: Run Lints
-      - run: npm run lint
+        run: npm run lint
