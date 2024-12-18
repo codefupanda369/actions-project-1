@@ -70,3 +70,14 @@ jobs:
         run: |
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
           echo "MONGODB_PASSWORD: ${{ env.MONGODB_PASSWORD }}"
+  account:
+    environment: int
+    env:
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: User Credentials
+        run: |
+          echo "USERNAME: ${{ env.USERNAME }}"
+          echo "PASSWORD: ${{ env.PASSWORD }}"
